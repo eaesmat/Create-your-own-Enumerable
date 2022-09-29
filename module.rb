@@ -5,4 +5,4 @@ module MyEnumerable
       ans = false unless yield i
     end
     ans
-  
+  end
