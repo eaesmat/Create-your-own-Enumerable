@@ -6,16 +6,18 @@ module MyEnumerable
     end
     ans
   end
+
   def any?
-  ans = false
-  each do |i|
-  ans = true if yield i
+    ans = false
+    each do |i|
+      ans = true if yield i
+    end
+    ans
   end
-  ans
-  end
+
   def filter
-  array = []
-  each { |i| array.push(i) if yield(i) }
-  array
+    array = []
+    each { |i| array.push(i) if yield(i) }
+    array
   end
 end
